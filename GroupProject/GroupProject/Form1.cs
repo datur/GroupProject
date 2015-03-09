@@ -50,10 +50,22 @@ namespace GroupProject
 
         }
 
+        
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            //getting the current date and time
+            DateTime timestamp = DateTime.Now;
+            label2.Text = timestamp.ToString();
+
+            //getting the computer name 
+            string computer = System.Environment.MachineName;
+            label3.Text = computer.ToString();
 
         }
+        
+
+
 
         
     }
