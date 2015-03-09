@@ -56,11 +56,11 @@ namespace GroupProject
         {
             //getting the current date and time
             DateTime timestamp = DateTime.Now;
-            label2.Text = timestamp.ToString();
+            label2.Text = "The time and date is " + timestamp.ToString();
 
             //getting the computer name 
             string computer = System.Environment.MachineName;
-            label3.Text = computer.ToString();
+            label3.Text = "The name of the computer is " + computer.ToString();
 
         }
         
