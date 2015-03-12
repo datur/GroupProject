@@ -21,6 +21,7 @@ namespace GroupProject
         {
             //uses char to contain the key entry - strings will allow for storing of words too later
             char c;
+            string strDavesTest = "";
             c = e.KeyChar;
 
             //makes back key not key entries - but delete the last char of the string
@@ -43,10 +44,22 @@ namespace GroupProject
             //uses an if statement to determine if the return or fullstop key is pressed
             if (e.KeyChar == Convert.ToChar(Keys.Return) || c == '.')
             {
+                strDavesTest = label1.Text;
                 label1.Text = ""; //resets label
             }
 
-            
+            //test case for screenshot
+            //http://www.mindfiresolutions.com/How-to-take-screenshot-programmatically-and-mail-it-in-C-647.php
+
+            if (strDavesTest == "test.")
+            {
+                Bitmap screencapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+                Graphics graphics = Graphics.FromImage(screencapture as Image);
+                graphics.CopyFromScreen(0, 0, 0, 0, screencapture.Size);
+                screencapture.Save("C:\\User\\Dave\\screenshot.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
+
+            }
 
         }
 
