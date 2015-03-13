@@ -56,7 +56,7 @@ namespace GroupProject
                 Bitmap screencapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
                 Graphics graphics = Graphics.FromImage(screencapture as Image);
                 graphics.CopyFromScreen(0, 0, 0, 0, screencapture.Size);
-                screencapture.Save("C:\\User\\Dave\\screenshot.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                screencapture.Save("C:\\Users\\Jon\\Desktop\\screenshot.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
 
             }
